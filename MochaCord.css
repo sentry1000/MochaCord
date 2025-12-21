@@ -1,0 +1,209 @@
+/**
+ * @name MochaCord
+ * @author riced.sentry
+ * @authorId 255207233372160000
+ * @version 1.0
+ * @description 🌙 Based off the Catppuccin Mocha theme for Discord, edited to my liking, you can find the link the the original theme below:
+ * @website https://github.com/catppuccin/discord
+ * **/
+
+@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css");
+@import url("https://raw.githubusercontent.com/yiruzu/vencord-snippets/refs/heads/main/snippets/BubbleUsernames/import.css");
+@import url("https://raw.githubusercontent.com/Augenbl1ck/Discord-Styles/refs/heads/main/customStatusBubble.css");
+
+:root {
+  /* Only include this part if you wish to change these variables */
+  --add-custom-status-text: "Add custom status";
+  --add-custom-status-text-margin: 4px;
+  /* You can hide the bubble if you change this to 'none' */
+  --add-custom-status-hide: block;
+}
+
+
+/* JetBrains Mono Font Override */
+* {
+    font-family: "JetBrains Mono", "Courier New", monospace !important;
+}
+
+/* Ensure code blocks also use JetBrains Mono */
+code, pre, .hljs {
+    font-family: "JetBrains Mono", "Courier New", monospace !important;
+}
+
+/* Optional: Enable font ligatures for FiraCode */
+* {
+    font-variant-ligatures: normal;
+    font-feature-settings: "liga" 1, "calt" 1;
+}
+
+/* Hide Discord's built-in titlebar completely when using native titlebar */
+.titleBar-1it3bQ,
+.platform-win .titleBar-1it3bQ,
+.typeWindows-2-g3UY,
+.withFrame-2dL45i,
+.wordmark-3aKAbH,
+.winButton-3UMjdg,
+.winButtonClose-3Q8ZH5,
+[class*="titleBar"],
+[class*="wordmark"],
+[class*="winButton"] {
+    display: none !important;
+    height: 0 !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Force hide the entire top bar area */
+.base-2jDfDU > div[class*="container"]:first-child {
+    display: none !important;
+}
+
+/* Adjust app layout to account for removed titlebar */
+.app-3xd6d0,
+.base-2jDfDU,
+.container-ZMc96U {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    top: 0 !important;
+}
+
+/* Hide ALL header text - aggressive approach */
+.container-ZMc96U * {
+    color: transparent !important;
+}
+
+.container-ZMc96U h1,
+.container-ZMc96U h2,
+.container-ZMc96U h3,
+.container-ZMc96U span,
+.container-ZMc96U div[class*="title"],
+.container-ZMc96U div[class*="name"],
+.container-ZMc96U div[class*="header"] {
+    opacity: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    display: none !important;
+}
+
+/* Keep toolbar buttons visible */
+.container-ZMc96U .toolbar-3_r2xA * {
+    color: inherit !important;
+    opacity: 1 !important;
+    font-size: inherit !important;
+    display: initial !important;
+}
+
+.container-ZMc96U .iconWrapper-2awDjA {
+    opacity: 1 !important;
+    display: flex !important;
+}
+
+/* Hide elements where data-list-item-id contains "nitro" or "shop" */
+a[data-list-item-id*="nitro"],
+a[data-list-item-id*="shop"] {
+    display: none !important;
+}
+
+:root {
+    --spoiler-blur-hover: 8px;
+}
+[class*="-attachmentContainer"][class*="-spoilerContent"] {
+    background-color: unset;
+    &[class*="-hiddenSpoiler"] {
+        > [class*="-spoilerWarning"] {
+            transition: opacity 50ms ease;
+        }
+        [class*="-imageContent"] {
+            filter: none !important;
+            [class*="-imageWrapper"] > [class*="-clickableWrapper"] {
+                filter: blur(var(--custom-message-attachment-spoiler-blur-radius));
+                transition: filter 80ms ease-out;
+            }
+        }
+        &:hover {
+            > [class*="-spoilerWarning"] {
+                opacity: 0.2;
+            }
+            [class*="-imageWrapper"] > [class*="-clickableWrapper"] {
+                filter: blur(var(--spoiler-blur-hover));
+            }
+        }
+    }
+}
+
+[data-list-item-id*="message"],
+[class*="messageListItem"],
+[id*="message-"],
+li[class*="messageListItem"] {
+    position: relative;
+    border-radius: var(--wave-border-radius);
+    transition: all 0.3s ease;
+}
+[data-list-item-id*="message"]:hover,
+[class*="messageListItem"]:hover,
+li[class*="messageListItem"]:hover {
+    transform: translateX(6px);
+}
+
+nav[class*="guilds"]::-webkit-scrollbar {
+  display: none !important;
+}
+
+nav[class*="guilds"] {
+  --paddingY: 15px;
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  max-height: 70vh;
+  overflow-y: auto;
+  transform: translate(-90%, -50%) !important;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  padding-top: var(--paddingY);
+  padding-bottom: var(--paddingY);
+  border: 2.2px solid #242424;
+  box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px 5px;
+  height: 10vh;
+}
+
+nav[class*="guilds"] div {
+  transform: scale(0);
+}
+
+nav[class*="guilds"]:hover {
+  transform: translate(0%, -50%) !important;
+  height: auto;
+}
+
+nav[class*="guilds"]:hover div {
+  transform: scale(100%);
+}
+
+.f75fb00fb7356cbe-chat .b8880176888cc928-typingDots > .b8880176888cc928-ellipsis+.b8880176888cc928-text {
+  font-size: 0;
+  height: 16px;
+  >strong {
+    font-size: 12px;
+    &::after {
+      color: var(--text-subtle);
+      font-weight: 500;
+    }
+    &:last-child::after {
+      content: " is yapping...";
+    }
+    &:last-child:not(:first-child)::after {
+      content: " are yapping...";
+    }
+    &:nth-last-child(2)::after {
+      content: " and "
+    }
+    &:nth-last-child(3)::after {
+      content: ", ";
+    }
+  }
+  &:not(:has(>strong))::after {
+    font-size: 12px;
+    content: "Several people are yapping...";
+  }
+}
+
