@@ -2,7 +2,7 @@
  * @name MochaCord
  * @author riced.sentry
  * @authorId 255207233372160000
- * @version 1.0
+ * @version 1.0.2
  * @description 🌙 Based off the Catppuccin Mocha theme for Discord, edited to my liking, you can find the link the the original theme below:
  * @website https://github.com/catppuccin/discord
  * **/
@@ -20,20 +20,16 @@
 }
 
 
-/* JetBrains Mono Font Override */
+/* Segoe UI Variable Display Semibold Font Override */
 * {
-    font-family: "JetBrains Mono", "Courier New", monospace !important;
+    font-family: "Segoe UI Variable Display Semibold", "Segoe UI Variable Display", "Segoe UI", sans-serif !important;
+    font-weight: 600 !important;
 }
 
-/* Ensure code blocks also use JetBrains Mono */
+/* Ensure code blocks also use Segoe UI Variable Display Semibold */
 code, pre, .hljs {
-    font-family: "JetBrains Mono", "Courier New", monospace !important;
-}
-
-/* Optional: Enable font ligatures for FiraCode */
-* {
-    font-variant-ligatures: normal;
-    font-feature-settings: "liga" 1, "calt" 1;
+    font-family: "Segoe UI Variable Display Semibold", "Segoe UI Variable Display", "Segoe UI", monospace !important;
+    font-weight: 600 !important;
 }
 
 /* Hide Discord's built-in titlebar completely when using native titlebar */
@@ -129,54 +125,6 @@ a[data-list-item-id*="shop"] {
             }
         }
     }
-}
-
-[data-list-item-id*="message"],
-[class*="messageListItem"],
-[id*="message-"],
-li[class*="messageListItem"] {
-    position: relative;
-    border-radius: var(--wave-border-radius);
-    transition: all 0.3s ease;
-}
-[data-list-item-id*="message"]:hover,
-[class*="messageListItem"]:hover,
-li[class*="messageListItem"]:hover {
-    transform: translateX(6px);
-}
-
-nav[class*="guilds"]::-webkit-scrollbar {
-  display: none !important;
-}
-
-nav[class*="guilds"] {
-  --paddingY: 15px;
-  position: absolute;
-  z-index: 100;
-  top: 50%;
-  max-height: 70vh;
-  overflow-y: auto;
-  transform: translate(-90%, -50%) !important;
-  transition: all 0.3s ease;
-  border-radius: 20px;
-  padding-top: var(--paddingY);
-  padding-bottom: var(--paddingY);
-  border: 2.2px solid #242424;
-  box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px 5px;
-  height: 10vh;
-}
-
-nav[class*="guilds"] div {
-  transform: scale(0);
-}
-
-nav[class*="guilds"]:hover {
-  transform: translate(0%, -50%) !important;
-  height: auto;
-}
-
-nav[class*="guilds"]:hover div {
-  transform: scale(100%);
 }
 
 .f75fb00fb7356cbe-chat .b8880176888cc928-typingDots > .b8880176888cc928-ellipsis+.b8880176888cc928-text {
