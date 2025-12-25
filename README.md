@@ -1,6 +1,6 @@
-🌙 Catppuccin Mocha theme for Discord based off the original theme of the same name, however my rendition is highly edited upon so It's seperate. You can find the link to the original theme here:
+🌌 Catppuccin Mocha theme for Discord based off the original theme of the same name, however my rendition is highly edited upon so It's seperate. You can find the link to the original theme here:
 https://github.com/catppuccin/discord
-<img width="1920" height="1057" alt="Discord_zPB8SXljHm" src="https://github.com/user-attachments/assets/859322c1-2453-4273-9a94-314390bb7280" />
+<img width="1880" height="1000" alt="image" src="https://github.com/user-attachments/assets/c1666fd9-78ec-4b21-b476-eae2c60f153f" />
 **---------------------------------------------------------**
 
 **MAKE SURE TO ENABLE THIS SETTING IN VENCORD'S SETTINGS!!!**
