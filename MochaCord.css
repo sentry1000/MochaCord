@@ -2,8 +2,8 @@
  * @name MochaCord
  * @author riced.sentry
  * @authorId 255207233372160000
- * @version 1.0.2
- * @description 🌙 Based off the Catppuccin Mocha theme for Discord, edited to my liking, you can find the link the the original theme below:
+ * @version 1.0.4
+ * @description 🌌 A smoothing pastel Discord theme based off the Catppuccin Mocha theme, edited to my liking, you can find the link the the original theme below:
  * @website https://github.com/catppuccin/discord
  * **/
 
@@ -19,17 +19,29 @@
   --add-custom-status-hide: block;
 }
 
-
-/* Segoe UI Variable Display Semibold Font Override */
-* {
-    font-family: "Segoe UI Variable Display Semibold", "Segoe UI Variable Display", "Segoe UI", sans-serif !important;
-    font-weight: 600 !important;
+[data-list-item-id*="message"],
+[class*="messageListItem"],
+[id*="message-"],
+li[class*="messageListItem"] {
+    position: relative;
+    border-radius: var(--wave-border-radius);
+    transition: all 0.3s ease;
+}
+[data-list-item-id*="message"]:hover,
+[class*="messageListItem"]:hover,
+li[class*="messageListItem"]:hover {
+    transform: translateX(6px);
 }
 
-/* Ensure code blocks also use Segoe UI Variable Display Semibold */
+/* Segoe UI Standard Font Override */
+* {
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    /* Removed forced font-weight so bold text is bold and normal text is normal */
+}
+
+/* Code blocks: Switched to Consolas (Standard Windows Monospace) for readability */
 code, pre, .hljs {
-    font-family: "Segoe UI Variable Display Semibold", "Segoe UI Variable Display", "Segoe UI", monospace !important;
-    font-weight: 600 !important;
+    font-family: "Consolas", "Courier New", monospace !important;
 }
 
 /* Hide Discord's built-in titlebar completely when using native titlebar */
@@ -155,3 +167,25 @@ a[data-list-item-id*="shop"] {
   }
 }
 
+/* Smaller DM page top buttons */
+a[data-list-item-id$="_friends"],
+a[data-list-item-id$="_library"],
+a[data-list-item-id$="_messageRequests"],
+a[data-list-item-id$="_nitro"],
+a[data-list-item-id$="_shop"],
+a[data-list-item-id$="_quests"] {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}
+
+.visual-refresh div[class*="-sidebar"] section[class$="-panels"] {
+  width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 1px);
+  left: var(--custom-guild-list-width);
+  bottom: 0px;
+  border-radius: 0px;
+  border: none;
+}
+
+.visual-refresh nav[class*=-guilds] {
+  margin-bottom: unset;
+}
