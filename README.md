@@ -4,4 +4,4 @@ https://github.com/catppuccin/discord
 **---------------------------------------------------------**
 
 **MAKE SURE TO ENABLE THIS SETTING IN VENCORD'S SETTINGS!!!**
-<img width="684" height="84" alt="image" src="https://github.com/user-attachments/assets/ecc7a5a0-84b1-4cc3-b9b2-9ce19f0f5003" />
+<img width="691" height="91" alt="image" src="https://github.com/user-attachments/assets/69717e67-e425-4854-9ef5-35f7d35185c7" />
