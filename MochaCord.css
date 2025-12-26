@@ -2,7 +2,7 @@
  * @name MochaCord
  * @author riced.sentry
  * @authorId 255207233372160000
- * @version 1.0.4
+ * @version 1.0.5
  * @description 🌌 A smoothing pastel Discord theme based off the Catppuccin Mocha theme, edited to my liking, you can find the link the the original theme below:
  * @website https://github.com/catppuccin/discord
  * **/
@@ -10,6 +10,7 @@
 @import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha.theme.css");
 @import url("https://raw.githubusercontent.com/yiruzu/vencord-snippets/refs/heads/main/snippets/BubbleUsernames/import.css");
 @import url("https://raw.githubusercontent.com/Augenbl1ck/Discord-Styles/refs/heads/main/customStatusBubble.css");
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css);
 
 :root {
   /* Only include this part if you wish to change these variables */
